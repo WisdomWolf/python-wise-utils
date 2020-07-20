@@ -1,7 +1,7 @@
 from setuptools import setup
 import wise_utils
 
-setup(name='python-wise-utils',
+setup(name='python_wise_utils',
       version=wise_utils.__version__,
       packages=setuptools.find_packages(),
       author='@wisdomwolf',
