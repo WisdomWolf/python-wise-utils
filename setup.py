@@ -1,5 +1,5 @@
 from setuptools import setup
-import reminders
+import wise_utils
 
 setup(name='python-wise-utils',
       version=wise_untils.__version__,
