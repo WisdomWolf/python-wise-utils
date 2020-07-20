@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-wise-utils"
+name = "python_wise_utils"
 version = "0.1.2"
 description = "Python interpreter convenience utilities"
 authors = ["Wisdom Wolf <wisdomwolf@gmail.com>"]
