@@ -3,7 +3,7 @@ import wise_utils
 
 setup(name='python-wise-utils',
       version=wise_utils.__version__,
-      py_modules=['wise_utils'],
+      packages=setuptools.find_packages(),
       author='@wisdomwolf',
       author_email='wisdomwolf@gmail.com',
       install_requires=[
