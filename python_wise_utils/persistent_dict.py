@@ -42,7 +42,7 @@ class DictPersistYAML(UserDict):
 
     def _dump(self):
         with self._path.open('w') as f:
-            yaml.dump(self.data, f, default_flow_style=False)
+            yaml.safe_dump(self.data, f, default_flow_style=False)
     
     def __getitem__(self, key):
         return super().__getitem__(key)
