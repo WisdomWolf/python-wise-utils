@@ -5,12 +5,13 @@ from pathlib import Path
 import yaml
 
 
-def memoized_singleton(cls, keyfunc=None):
+def registration_factory(cls, keyfunc=None):
     memoized_instances = {}
     
     @wraps(cls)
     def factory(*args, **kwargs):
-        key = keyfunc(*args, **kwargs) if keyfunc else cls.keyfunc(*args, **kwargs)
+        key = keyfunc(*args, **kwargs) \
+                if keyfunc else cls._keyfunc(*args, **kwargs)
         if key in memoized_instances:
             return memoized_instances[key]
 
@@ -21,11 +22,11 @@ def memoized_singleton(cls, keyfunc=None):
     return factory
 
 
-@memoized_singleton
+@registration_factory
 class DictPersistYAML(UserDict):
     
     @staticmethod
-    def keyfunc(filename):
+    def _keyfunc(filename):
         return Path(filename).expanduser().absolute()
 
     def __init__(self, filename, *args, **kwargs):
