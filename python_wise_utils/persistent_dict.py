@@ -6,17 +6,17 @@ import yaml
 
 
 def registration_factory(cls, keyfunc=None):
-    memoized_instances = {}
+    instance_registry = {}
     
     @wraps(cls)
     def factory(*args, **kwargs):
         key = keyfunc(*args, **kwargs) \
                 if keyfunc else cls._keyfunc(*args, **kwargs)
-        if key in memoized_instances:
-            return memoized_instances[key]
+        if key in instance_registry:
+            return instance_registry[key]
 
         instance = cls(*args, **kwargs)
-        memoized_instances[key] = instance
+        instance_registry[key] = instance
         return instance
 
     return factory
