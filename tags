@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DictPersistYAML	python_wise_utils/persistent_dict.py	/^class DictPersistYAML(UserDict):$/;"	c
+__getitem__	python_wise_utils/persistent_dict.py	/^    def __getitem__(self, key):$/;"	m	class:DictPersistYAML	file:
+__init__	python_wise_utils/persistent_dict.py	/^    def __init__(self, filename, *args, **kwargs):$/;"	m	class:DictPersistYAML
+__repr__	python_wise_utils/persistent_dict.py	/^    def __repr__(self):$/;"	m	class:DictPersistYAML	file:
+__setitem__	python_wise_utils/persistent_dict.py	/^    def __setitem__(self, key, val):$/;"	m	class:DictPersistYAML	file:
+__version__	python_wise_utils/__init__.py	/^__version__ = '0.3.0'$/;"	v
+_dump	python_wise_utils/persistent_dict.py	/^    def _dump(self):$/;"	m	class:DictPersistYAML
+_keyfunc	python_wise_utils/persistent_dict.py	/^    def _keyfunc(filename):$/;"	m	class:DictPersistYAML
+_load	python_wise_utils/persistent_dict.py	/^    def _load(self):$/;"	m	class:DictPersistYAML
+author	setup.py	/^    author='Wisdom Wolf',$/;"	v
+author_email	setup.py	/^    author_email='wisdomwolf@gmail.com',$/;"	v
+description	setup.py	/^    description='Python interpreter convenience utilities',$/;"	v
+extras_require	setup.py	/^    extras_require={$/;"	v
+factory	python_wise_utils/persistent_dict.py	/^    def factory(*args, **kwargs):$/;"	f	function:registration_factory
+grouper	python_wise_utils/misc_functions.py	/^def grouper(iterable, n, fillvalue=None):$/;"	f
+long_description	setup.py	/^    long_description=readme,$/;"	v
+name	setup.py	/^    name='python_wise_utils',$/;"	v
+package_data	setup.py	/^    package_data={},$/;"	v
+package_dir	setup.py	/^    package_dir={"": "."},$/;"	v
+packages	setup.py	/^    packages=['python_wise_utils'],$/;"	v
+pager	python_wise_utils/misc_functions.py	/^def pager(iterable, length=20):$/;"	f
+readme	setup.py	/^readme = ''$/;"	v
+registration_factory	python_wise_utils/persistent_dict.py	/^def registration_factory(cls, keyfunc=None):$/;"	f
+update	python_wise_utils/persistent_dict.py	/^    def update(self, *args, **kwargs):$/;"	m	class:DictPersistYAML
+version	setup.py	/^    version='0.2.2',$/;"	v
