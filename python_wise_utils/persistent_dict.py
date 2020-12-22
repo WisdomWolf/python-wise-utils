@@ -7,7 +7,7 @@ import yaml
 
 def registration_factory(cls, keyfunc=None):
     instance_registry = {}
-    
+
     @wraps(cls)
     def factory(*args, **kwargs):
         key = keyfunc(*args, **kwargs) \
@@ -24,13 +24,13 @@ def registration_factory(cls, keyfunc=None):
 
 @registration_factory
 class DictPersistYAML(UserDict):
-    
+
     @staticmethod
     def _keyfunc(filename):
         return Path(filename).expanduser().absolute()
 
     def __init__(self, filename, *args, **kwargs):
-        self._path = self.keyfunc(filename)
+        self._path = self._keyfunc(filename)
         super().__init__(*args, **kwargs)
         self._load()
 
@@ -44,7 +44,7 @@ class DictPersistYAML(UserDict):
     def _dump(self):
         with self._path.open('w') as f:
             yaml.safe_dump(self.data, f, default_flow_style=False)
-    
+
     def __getitem__(self, key):
         return super().__getitem__(key)
 
@@ -61,3 +61,4 @@ class DictPersistYAML(UserDict):
             for k, v in dict_.items():
                 self[k] = v
             self._dump()
+
